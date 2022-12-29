@@ -23,6 +23,10 @@ $(document).ready(function () {
     let scrollDir = event.deltaY > 1 ? 1 : -1;
     delayScroll(scrollDir);
   });
+  document.addEventListener("scoll",(event)=> {
+    let scrollDir = event.deltaY > 1 ? 1 : -1;
+    delayScroll(scrollDir);
+  })
 
   function delayScroll(scrollDir) {
     if (!canScroll) {
