@@ -23,10 +23,23 @@ $(document).ready(function () {
     let scrollDir = event.deltaY > 1 ? 1 : -1;
     delayScroll(scrollDir);
   });
-  document.addEventListener("scrollstart",(event)=> {
-    let scrollDir = event.deltaY > 1 ? 1 : -1;
-    delayScroll(scrollDir);
-  })
+
+
+  //touchestartevent ##########################
+
+  var ts;
+$(document).bind('touchstart', function (e){
+   ts = e.originalEvent.touches[0].clientY;
+});
+
+$(document).bind('touchend', function (e){
+   var te = e.originalEvent.changedTouches[0].clientY;
+   if(ts > te+5){
+    delayScroll(1);
+   }else if(ts < te-5){
+    delayScroll(-1);
+   }
+});
 
   function delayScroll(scrollDir) {
     if (!canScroll) {
