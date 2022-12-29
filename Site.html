@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="hero-slider" onscroll="scrollAnimation()">
+        <div id="slideshow">
+            <div id="slides-main" class="slides">
+                <div class="slide w" data-index="0">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="firstTitle">
+                                <h1>Deno</h1> <img src="images/Deno_2021.svg" alt="logoDeno" class="logoDeno">
+                            </div>
+                            <div class="chevronCont">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide b" data-index="1">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div id="ryan">
+                                <h3>Ryan Dahl</h3>
+                                <img src="images/ryan.png" alt="ryanDahl" class="circle">
+                            </div>
+                            <div class="card-info">
+
+                                <div class="carousel">
+                                    <button class="carouselBouton" data-id="-1"><img src="images/chevron-circle-left.svg" alt="chevron" ></button>
+                                    <ul class="cardCarousel">
+                                        <li>
+                                            <h4>Préhistoire</h4>
+                                            <p>Seuls les navigateurs compilent le Javascript permettant de rendre
+                                                dynamiques et interactives des pages web statiques avec des animations
+                                                ou autres...</p>
+                                        </li>
+                                        <li>
+                                            <h4>2009</h4>
+                                            <p>Le monsieur sur la gauche à la brillante idée de prendre le moteur de
+                                                compilation V8 Javascript utilisé par les navigateurs pour s’en servir
+                                                en dehors et coder avec un noyau en C++ le runtime NodeJS</p>
+                                        </li>
+                                        <li>
+                                            <h4>Années suivantes</h4>
+                                            <p>NodeJS est fréquemment utilisé pour créer des services côté serveur comme
+                                                des API.<br> Il permet aux développeurs Web d'utiliser un seul langage
+                                                dans leurs projets en évitant PHP ou JAVA…
+                                                <br>Sa popularité grandit vite car il améliore la rapidité d'exécution.
+                                                Il est beaucoup moins lourd et plus simple d'apprentissage pour des
+                                                débutants.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4>Années suivantes</h4>
+                                            <p>Le gestionnaire de paquets npm fourni par défaut, permet facilment
+                                                d'installer de nombreuses dépendances à plein de paquets.
+                                                <br>Tous ces facteurs font qu'aujourd'hui NodeJS est utilisé par
+                                                beaucoup de grandes marques comme Netflix, Amazon, Paypal ou Linkedin
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4>2018</h4>
+                                            <p>Lors de la conférence ConfJS, Ryan Dahl fait part de ses 10 regrets par
+                                                rapport à NodeJS concluant par la création du runtime DENO (oui c’est
+                                                rigolo c’est NODE en verlan).<br> Il a beaucoup de similitudes avec son
+                                                cousin Node : son fonctionnement avec le moteur V8 ou son utilisation
+                                                côté serveur de Javascript. Une des grandes différences est que Deno à
+                                                un noyau codé en Rust </p>
+                                        </li>
+                                        <li>
+                                            <h4>2020...</h4>
+                                            <p> La première version stable de Deno est disponible (1.22.1). Il est
+                                                possible de l’utiliser en production sans courir de risque. Une forte
+                                                communauté s’est développée autour du projet et des mises à jour sont
+                                                fréquentes. A l'heure où j’écris, la v1.29.1 vient de sortir (15/12/22).
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <button class="carouselBouton" data-id="1"><img src="images/chevron-circle-right.svg" alt="chevron"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide w" data-index="2">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <img src="images/Deno_2021.svg" alt="logoDeno" class="logoDeno">
+                            <img src="images/eclair.svg" alt="eclair" class="eclair">
+                            <img src="images/Node.js_logo.svg" alt="logoNode" class="logoNode">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide b" data-index="3">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">INSTALLATION DE DENO</h2><img src="images/Deno_2021.svg"
+                                    alt="logoDeno" class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuDeno">
+                                    <p class="green">Rien de plus simple</p>
+                                    <p>Sous linux éxécuter <span class="code">curl -fsSL https://deno.land/x/install/install.sh | sh</span></p>
+                                    <p>Sous windows éxécuter <span class="code">irm https://deno.land/install.ps1 | iex</span></p>
+                                    <p>Puis tester votre installation avec <span class="code">deno --vesrsion</span></p>
+                                </div>
+                                <img src="images/eclair.svg" alt="eclair" class="eclair">
+                                <div class="contenuNode">
+                            <p>Si vous utilisez Visual Studio Code l'extension officielle est "Deno" de "denoland" </p>
+                            <p>Assurez vous que le chemin vers Deno est bien mis dans les paramètres de Visual Studio Code</p>
+                            <p>L'installation de NodeJs est un peu plus difficile mais Deno et Node se différencient surtout dans l'utilisation</p>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w" data-index="4">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">GESTIONNAIRE DE PAQUETS</h2><img src="images/nodeLogo.svg"
+                                    alt="logoNode" class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuDeno">
+                                    <p class="green title">Décentralisé</p>
+                                    <p><b class="code">import { pack } from "https://deno.land/x/pack.ts"</b></p>
+                                    <p>Frontière entre installation et éxécution abolie</p>
+                                    <p><span class="green">Paquet importé depuis un URL</span> puis mis en cache dans le
+                                        disque dur (plus de node_module). Donc l'importation est unique et utilisable
+                                        dans tous les projets.</p>
+                                    <p><span class="green">Fléxible</span> il est possible de créer ses propres paquets
+                                        sans les publier</p>
+                                    <p>Bibliothéque officielle, vérifiée, bien fournie et mise souvent à jour.
+                                        Possibilité d'utiliser npm dans les dernières versions.</p>
+                                </div>
+                                <img src="images/eclair.svg" alt="eclair" class="eclair">
+                                <div class="contenuNode">
+                                    <p class="red title">NPM</p>
+                                    <p><b class="code">npm i pack</b> puis <b class="code">const pack = require
+                                            ("pack").</b></p>
+                                    <p><span class="red">Dépendant de npm</span>, si on souhaite éxecuter votre code il
+                                        faut d'abord télécharger toutes les dependances du <i>package.json</i> </p>
+                                    <p>Obligatin d'installer toutes les dépendances sur chaque projet cela alourdit donc
+                                        le disque dur</p>
+                                    <p><span class="green">Très grande bibliothèque </span>avec une communauté très
+                                        active</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide b" data-index="5">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">IMPORTATION DE PAQUETS</h2><img src="images/nodeLogo.svg"
+                                    alt="logoNode" class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuDeno">
+                                    <img src="images/tick.svg" alt="tick" class="emote">
+                                    <p class="green">Modules ES</p>
+                                    <p><b class="code">import { pack } from "https://deno.land/x/pack.ts"</b></p>
+                                    <p><span class="green">Chargement sélectif</span> des parties utilisées à partir
+                                        d'un paquet, c'est donc plus économique en mémoire</p>
+                                    <p><span class="green">Chargement asynchrone,</span> ce qui améliore la performance
+                                    </p>
+
+                                </div>
+                                <img src="images/eclair.svg" alt="eclair" class="eclair">
+                                <div class="contenuNode">
+                                    <img src="images/croix.svg" alt="croix" class="emote">
+                                    <p class="red">CommonJS</p>
+                                    <p><b class="code">npm i pack</b> puis <b class="code">const pack = require
+                                            ("pack").</b></p>
+                                    <p> <span class="red">Chargement synchrone,</span> plus lent surtout s'il y à
+                                        beaucoup de dépendances</p>
+                                    <p>Mises à jour plus compliquées et à faire manuellement</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w" data-index="6">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">SUPPORT DE TYPESCRIPT</h2><img src="images/nodeLogo.svg" alt="logoNode" class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuDeno">
+                                    <img src="images/tick.svg" alt="tick" class="emote">
+                                    <p class="green">Compilateur TypeScript intégré</p>
+                                    <p>Comme Deno est un runtime à la fois Javascript et TypeScript, il suffit
+                                        d'enregister un fichier en .ts au lieu du .js.</p>
+                                    <p>Impose une certaine rigueur de code donc un code plus robuste au final.</p>
+                                </div>
+                                <img src="images/eclair.svg" alt="eclair" class="eclair">
+                                <div class="contenuNode">
+                                    <img src="images/croix.svg" alt="croix" class="emote">
+                                    <p class="red">Processus très long</p>
+                                    <p>Installer TypeScript grâce à npm</p>
+                                    <b class="code">npm install @types/node --save-dev</b>
+                                    <p>Mettre à jour les fichiers <span class="red">package.json, tsconfig.json</span>
+                                    </p>
+                                    <p>Puis pour finir être sûr que les modules prennent bien en charge @types. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide b" data-index="7">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">SÉCURITÉ</h2><img src="images/nodeLogo.svg" alt="logoNode"
+                                    class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuDeno">
+                                    <img src="images/tick.svg" alt="tick" class="emote">
+                                    <p>Permissions simples à mettre en place : </p>
+                                    <ul>
+                                        <li>
+                                            <p>> Lecture / Écriture du disque</p><b
+                                                class="code">--allow-(read/write)=./dataPrivé.json</b>
+                                        </li>
+                                        <li>
+                                            <p>> Utilisations variables d'environnements</p><b
+                                                class="code">--allow-env</b>
+                                        </li>
+                                        <li><a href="https://deno.land/manual@v1.29.1/basics/permissions">> Liste de
+                                            permissions</a></li>
+                                    </ul>
+
+                                </div>
+                                <img src="images/eclair.svg" alt="eclair" class="eclair">
+                                <div class="contenuNode">
+                                    <img src="images/croix.svg" alt="croix" class="emote">
+                                    <p>Pas de contrôle sur les accès des fichiers certains paquets installés peuvent
+                                        accéder à des ressources privées.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w" data-index="8">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">PLEIN D'AUTRES PETITES CHOSES</h2><img src="images/Deno_2021.svg"
+                                    alt="logoDeno" class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuTout">
+                                    <p>Outil de formatage pour un code tout beau : <b class="code">deno fmt</b></p>
+                                    <p>Lire l'arborescence des dépendances de votre application simplement grâce à : <b
+                                            class="code">deno info</b></p>
+                                    <p>Pour mettre à jour : <b class="code">deno upgrade</b><span class="red"> Il
+                                            n'offre par contre pas de possibilité de sélection de version pour
+                                            l'instant</span></p>
+                                    <p>Module de test nativement (même si tester c'est douter) <b class="code">deno
+                                            test</b> :</p>
+                                    <img src="images/exempleTest.png" alt="Exemple de test">
+                                    <p>Deno a nativement l'accès à l'API du navigateur ce qui permet de faire des <span
+                                            class="green">appels asymchrones très facilement.</span> Sans avoir besoin
+                                        d'installer une librairie comme sur Node</p>
+                                    <img src="images/await.png" alt="exemple fonction await">
+                                    <p>...</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide b" data-index="9">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">POUR CONCLURE</h2><img src="images/nodeLogo.svg" alt="logoNode"
+                                    class="logoHead">
+                            </div>
+                            <div class="contenuSlide">
+                                <div class="contenuTout">
+                                    <p>Deno est prometteur et en beaucoup de points meilleur que Node. Seulement, il
+                                        doit le prouver à la communauté. Pour l’instant Node a une avance considérable
+                                        car des frameworks majeurs comme React ou Angular ne sont toujours pas adaptés
+                                        officiellement sur Deno. Du fait de sa jeunesse, il évolue très vite car encore
+                                        peu utilisé par des grosses entreprises en production. Les dernières mises à
+                                        jour visent à améliorer la compatibilité avec NPM ce qui permettra peut-être de
+                                        rapprocher Deno de son grand frère.</p>
+                                    <p>L'utilisation de Node est si importante qu'il parait difficle à Deno de le
+                                        remplace totalement. L’idée de son créateur de reprendre tous les défauts de son
+                                        projet pour repartir à zéro avec une meilleure expérience est très instructive.
+                                    </p>
+                                    <p><b>Deno est une technologie à garder de vue.
+                                        </b></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w" data-index="10">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <div class="headSlide"><img src="images/Deno_2021.svg" alt="logoDeno" class="logoHead">
+                                <h2 class="title">BIBLIOGRAPHIE</h2><img src="images/Deno_2021.svg" alt="logoDeno"
+                                    class="logoHead">
+                            </div>
+                            <div class="contenuSlide biblio">
+                                <a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">Conférence sur les 10 regrets de Ryan Dahl par rapport à Node</a>
+                                <a href="https://www.youtube.com/watch?v=f6HLm0GXilk">Video sur les trois grands points
+                                    de Deno</a>
+                                <a href="https://deno.land/manual@v1.29.1/getting_started/installation">Documentation
+                                    officiel pour l'installation de Deno</a>
+                                    <a href="https://www.youtube.com/watch?v=mzX6DX1S7Fc">C'est quoi NodeJS en vidéo</a>
+                                <a href="https://blog.eleven-labs.com/fr/deno-vs-node/#:~:text=Avec%20Deno%2C%20vous%20pouvez%20l,beaucoup%20plus%20propre%20et%20simple">Comparatif
+                                    de Deno et Node</a>
+                                <a href="https://www.knowledgehut.com/blog/web-development/commonjs-vs-es-modules">CommonJS
+                                    vs ES Modules</a>
+                                <a href="https://externlabs.com/blogs/deno-vs-nodejs/">Rapide comparatif Node vs
+                                    Deno</a>
+                                <a href="https://deno.land/manual@v1.28.0/basics/react">Des compromis à ReactJS avec
+                                    Deno</a>
+                                <a href="https://github.com/alosaur/angular_deno">Rendu Angular sur Deno
+                                    (experimental)</a>
+                                <a href="https://deno.land/x">Deno Land plateforme ou la communauté peu poster ses modules</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide b" data-index="11">
+                    <div class="abs-mask">
+                        <div class="slide-image">
+                            <h2>MERCI DE VOTRE LECTURE</h2>
+                            <img src="images/Jsdeno.png" alt="Code">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="jquery-3.6.1.min.js.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
