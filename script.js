@@ -23,7 +23,7 @@ $(document).ready(function () {
     let scrollDir = event.deltaY > 1 ? 1 : -1;
     delayScroll(scrollDir);
   });
-  document.addEventListener("scoll",(event)=> {
+  document.addEventListener("scrollstart",(event)=> {
     let scrollDir = event.deltaY > 1 ? 1 : -1;
     delayScroll(scrollDir);
   })
