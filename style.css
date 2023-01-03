@@ -19,6 +19,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  width: 30px;
+  cursor: pointer;
 
 
 }
@@ -549,16 +552,16 @@ a:hover {
   }
 }
 
-@media (min-width: 1750px) {
+@media (min-width: 1550px) {
 
   .contenuDeno,
   .contenuNode,
   .contenuTout {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
   }
 
   .code {
-    font-size: 1.3vw;
+    font-size: 1.3rem;
   }
 
 }

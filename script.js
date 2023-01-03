@@ -24,6 +24,11 @@ $(document).ready(function () {
     delayScroll(scrollDir);
   });
 
+    //##############################chevron event
+    $(".chevronCont").bind("click", (event) => {
+      delayScroll(1);
+    });
+
 
   //touchestartevent ##########################
 
